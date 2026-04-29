@@ -15,22 +15,37 @@ A full-featured P2P lending and savings platform backend built with Node.js, Exp
 
 ```
 smartvault-backend/
-├── server.js                 # Main entry point
-├── package.json             # Project dependencies
-├── .env                     # Environment variables
-├── config/
-│   └── database.js          # PostgreSQL connection
-├── routes/
-│   ├── users.js            # User authentication & profile
-│   ├── accounts.js         # Account operations
-│   ├── loans.js            # P2P lending operations
-│   ├── pods.js             # Savings pods management
-│   └── leaderboard.js      # Rankings endpoints
-├── middleware/
-│   └── auth.js             # JWT authentication middleware
-└── utils/
-    ├── loanEligibility.js  # Loan eligibility calculations
-    └── notifications.js    # Alert notifications
+├── server.js                  # Main entry point
+├── package.json              # Project dependencies
+├── .env.example              # Environment variables template
+├── .gitignore               # Git ignore rules
+├── README.md                # Project documentation
+└── src/
+    ├── config/
+    │   └── database.js       # PostgreSQL connection
+    ├── routes/
+    │   ├── users.js         # User authentication & profile
+    │   ├── accounts.js      # Account operations
+    │   ├── loans.js         # P2P lending operations
+    │   ├── pods.js          # Savings pods management
+    │   └── leaderboard.js   # Rankings endpoints
+    ├── controllers/
+    │   ├── userController.js
+    │   ├── loanController.js
+    │   ├── podController.js
+    │   └── leaderboardController.js
+    ├── models/
+    │   ├── User.js
+    │   ├── Account.js
+    │   ├── Loan.js
+    │   ├── Pod.js
+    │   └── Transaction.js
+    ├── middleware/
+    │   ├── auth.js          # JWT authentication middleware
+    │   └── errorHandler.js
+    └── utils/
+        ├── loanEligibility.js
+        └── notifications.js
 ```
 
 ## Installation
