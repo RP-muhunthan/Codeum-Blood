@@ -1,0 +1,75 @@
+:root {
+  --bg: #0f172a;
+  --surface: #111827;
+  --text: #f8fafc;
+  --accent: #667eea;
+  --accent-strong: #764ba2;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+html,
+#root {
+  margin: 0;
+  min-height: 100%;
+  font-family: 'Inter', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: rgba(15, 23, 42, 0.95);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: var(--accent);
+}
+
+.navbar-links {
+  display: flex;
+  gap: 16px;
+}
+
+.navbar-links a,
+.navbar-links button {
+  color: white;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.navbar-links button:hover,
+.navbar-links a:hover {
+  color: var(--accent);
+}
+
+.card,
+.pod-card,
+.loan-card,
+.transaction-item {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 20px;
+}
